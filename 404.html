@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Página não encontrada - Hym Bio" />
+  <meta property="og:description" content="Ops! A página que você procurou não existe." />
+  <meta property="og:url" content="https://hymbio.xyz/404" />
+  <meta property="og:type" content="website" />
+  <title>Erro 404 | Hym Bio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 30px 15px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #flakes-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .flake {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #ff954f;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-10vh) scale(0.5);
+        opacity: 0;
+      }
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 4em;
+      color: #ff954f;
+      z-index: 1;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #cccccc;
+      margin: 10px 0 30px;
+      z-index: 1;
+    }
+
+    a {
+      text-decoration: none;
+      background-color: transparent;
+      border: 2px solid #ff954f;
+      color: #ff954f;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: 0.3s;
+      font-size: 1em;
+      z-index: 1;
+      position: relative;
+    }
+
+    a:hover {
+      background-color: #ff954f;
+      color: #0f0f0f;
+    }
+  </style>
+</head>
+<body>
+  <div id="flakes-container"></div>
+
+  <img src="https://imgur.com/vN52gES.png" alt="Logo Hym Bio" class="logo" />
+  <h1>404</h1>
+  <p>Oops! A página que você está procurando não foi encontrada.</p>
+  <a href="https://hymbio.xyz"><i class="fas fa-arrow-left"></i> Voltar ao Início</a>
+
+  <script>
+    const flakesContainer = document.getElementById('flakes-container');
+    const numFlakes = 40;
+
+    for (let i = 0; i < numFlakes; i++) {
+      const flake = document.createElement('div');
+      flake.className = 'flake';
+      flake.style.left = Math.random() * 100 + 'vw';
+      flake.style.bottom = '-20px';
+      flake.style.animationDuration = (5 + Math.random() * 5) + 's';
+      flake.style.animationDelay = Math.random() * 5 + 's';
+      flakesContainer.appendChild(flake);
+    }
+  </script>
+</body>
+</html>
+
+

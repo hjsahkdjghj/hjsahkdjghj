@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@hymbio | Links</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://imgur.com/vN52gES.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- CSS do tema principal -->
+    <link rel="stylesheet" href="hym.css">
+    <style>
+      /* Adicione estilos CSS para o botão de música */
+      .music-button {
+        display: block;
+        margin: 20px auto;
+        width: 50px;
+        height: 50px;
+        background-color: #;
+        border-radius: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        line-height: 60px;
+        cursor: pointer;
+      }
+
+      .music-button i {
+        font-size: 24px;
+        color: #fff;
+      }
+
+      .music-button:hover {
+        background-color: #;
+      }
+
+      /* Estilo do botão de home */
+      .home-button {
+        display: block;
+        margin: 20px auto;
+        width: 50px;
+        height: 50px;
+      }
+
+      .home-button img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: transform 0.3s;
+      }
+
+      .home-button img:hover {
+        transform: scale(1.1);
+      }
+
+      /* Outros estilos... */
+    </style>
+  </head> 
+
+  <body>
+    <!-- Animação de fundo de pixel paralaxe -->
+    <section class="animated-background">
+      <div id="stars1"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </section>
+
+    <!-- Foto de perfil -->
+    <a id="profilePicture" href="#popup">
+      <img src="https://imgur.com/s0HKgzt.png" alt="Profile Picture">
+    </a>
+
+    <div class="overlay" id="popup">
+      <div class="popup">
+        <div class="popup-photo">
+          <a href="https://imgur.com/s0HKgzt.png" target="_blank">
+            <img src="https://imgur.com/s0HKgzt.png" alt="Profile Picture">
+          </a>
+        </div>
+        <div class="popup-quote">
+          ★ 𝓼𝓱𝓮 𝓶𝓪𝓴𝓮𝓼 𝓶𝓮 𝓱𝓪𝓹𝓹𝔂 ★
+        </div>
+        <a class="popup-close" onclick="history.back()">&times;</a>
+      </div>
+    </div>
+
+    <!-- Nome com verificado -->
+    <div id="userName">
+      @hymbio <i class="fas fa-check-circle" id="verified-icon"></i>
+    </div>
+
+    <!-- Frase abaixo do nome -->
+    <div id="userQuote">
+      ★ 𝓼𝓱𝓮 𝓶𝓪𝓴𝓮𝓼 𝓶𝓮 𝓱𝓪𝓹𝓹𝔂 ★
+    </div>
+
+    <!-- Links -->
+    <div id="links">
+      <a class="link" href="https://github.com/hymbio" target="_blank">
+        <i class="fab fa-github">&nbsp;</i>Github
+      </a>
+      <a class="link" href="https://discord.gg/UEJkp6MyFy" target="_blank">
+        <i class="fab fa-discord">&nbsp;</i>Discord
+      </a>
+      <a class="link" href="https://www.youtube.com/@hymbio" target="_blank">
+        <i class="fab fa-youtube">&nbsp;</i>Youtube
+      </a>
+      <a class="link" href="https://www.instagram.com/hymbio" target="_blank">
+        <i class="fab fa-instagram">&nbsp;</i>Instagram
+      </a>
+    </div>
+
+    <!-- Botão de música -->
+    <div class="music-button" id="musicButton">
+      <i class="fas fa-music"></i>
+    </div>
+
+    <!-- Botão de home -->
+    <a class="home-button" href="https://hymbio.xyz/" target="_blank">
+      <img src="https://imgur.com/vN52gES.png" alt="Home">
+    </a>
+
+    <div id="hashtag">
+      Powered by: @hymbio
+    </div>
+
+    <!-- Áudio da música -->
+    <audio id="musicPlayer" src="https://server1.mtabrasil.com.br/play?id=KjgkVqhzG10" loop></audio>
+
+    <script>
+      // Controle de ativação/desativação da música
+      const musicButton = document.getElementById('musicButton');
+      const musicPlayer = document.getElementById('musicPlayer');
+      let isPlaying = false;
+
+      musicButton.addEventListener('click', function() {
+        if (isPlaying) {
+          musicPlayer.pause();
+        } else {
+          musicPlayer.play();
+        }
+        isPlaying = !isPlaying;
+      });
+    </script>
+  </body>
+</html>

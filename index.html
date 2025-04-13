@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Planos Hym Bio" />
+  <meta property="og:description" content="Escolha o plano ideal para exibir seus links no Hym Bio!" />
+  <meta property="og:url" content="https://hymbio.xyz/" />
+  <meta property="og:type" content="website" />
+  <title>Planos | Hym Bio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+      overflow-x: hidden;
+    }
+
+    canvas#snow-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ff954f;
+      margin-bottom: 40px;
+      z-index: 1;
+    }
+
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      z-index: 1;
+    }
+
+    .plan {
+      background-color: #1a1a1a;
+      border: 2px solid #ff954f;
+      border-radius: 15px;
+      padding: 25px;
+      width: 300px;
+      box-shadow: 0 0 20px rgba(255, 149, 79, 0.2);
+      transition: transform 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .plan:hover {
+      transform: translateY(-10px);
+    }
+
+    .plan h2 {
+      color: #ff954f;
+      margin-bottom: 10px;
+    }
+
+    .links-info {
+      font-size: 1.2em;
+      margin: 10px 0 5px;
+      color: #ffffff;
+    }
+
+    .monthly {
+      font-size: 0.9em;
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ff954f;
+      margin-bottom: 10px;
+    }
+
+    .benefits {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .benefits li {
+      margin-bottom: 10px;
+    }
+
+    .benefits i {
+      margin-right: 8px;
+      color: #ff954f;
+    }
+
+    .plan a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: transparent;
+      border: 2px solid #ff954f;
+      color: #ff954f;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .plan a:hover {
+      background-color: #ff954f;
+      color: #0f0f0f;
+    }
+
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .plan {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas para flocos -->
+  <canvas id="snow-canvas"></canvas>
+
+  <img src="https://imgur.com/vN52gES.png" alt="Logo Hym Bio" class="logo" />
+  <h1>Escolha seu Plano</h1>
+
+  <div class="plans">
+    <!-- Plano Básico -->
+    <div class="plan">
+      <h2>Plano Básico</h2>
+      <p class="links-info">3 Links</p>
+      <p class="price">R$ 3,00</p>
+      <p class="monthly">Assinatura mensal</p>
+      <ul class="benefits">
+        <li><i class="fas fa-cog"></i>Configuração Pelo Discord</li>
+        <li><i class="fas fa-hdd" style="color: green;"></i>Online 24h</li>
+        <li><i class="fas fa-link"></i>Ícones das Redes</li>
+        <li><i class="fas fa-check-circle"></i>Acesso Imediato</li>
+        <li><i class="fas fa-headset" style="color: green;"></i>Suporte</li>
+        <li><i class="fas fa-gift"></i>Uma Atualização Gratuita Mensal</li>
+        <li><i class="fas fa-crown" style="color:#ffff;"></i>Cargo no Servidor</li>
+      </ul>
+      <a href="https://discord.gg/2QjR22xjDU">Assinar</a>
+    </div>
+
+    <!-- Plano Plus -->
+    <div class="plan">
+      <h2>Plano Plus <i class="fas fa-badge-check" title="Verificado" style="color:#4caf50;"></i></h2>
+      <p class="links-info">5 Links</p>
+      <p class="price">R$ 7,00</p>
+      <p class="monthly">Assinatura mensal</p>
+      <ul class="benefits">
+        <li><i class="fas fa-cog"></i>Configuração Pelo Discord</li>
+        <li><i class="fas fa-hdd" style="color: green;"></i>Online 24h</li>
+        <li><i class="fas fa-link"></i>Ícones das Redes</li>
+        <li><i class="fas fa-check-circle"></i>Acesso Imediato</li>
+        <li><i class="fas fa-headset" style="color: green;"></i>Suporte</li>
+        <li><i class="fas fa-gift"></i>Uma Atualização Gratuita Mensal</li>
+        <li><i class="fas fa-check-circle" style="color:#ffff;"></i>Selo de verificado</li>
+        <li><i class="fas fa-crown" style="color:#ffff;"></i>Cargo no Servidor</li>
+      </ul>
+      <a href="https://discord.gg/2QjR22xjDU">Assinar</a>
+    </div>
+
+    <!-- Plano Booster -->
+    <div class="plan">
+      <h2>Plano Booster <i class="fas fa-" title="Boosters" style="color:#ff73fa;"></i></h2>
+      <p class="links-info">1 Link</p>
+      <p class="price">Exclusivo para Boosters</p>
+      <ul class="benefits">
+        <li><i class="fas fa-cog" style="color:#ff73fa;"></i>Configuração Pelo Discord</li>
+        <li><i class="fas fa-hdd" style="color:#ff73fa;"></i>Online 24h</li>
+        <li><i class="fas fa-link" style="color:#ff73fa;"></i>Ícones das Redes</li>
+        <li><i class="fas fa-headset" style="color:#ff73fa;"></i>Suporte</li>
+        <li><i class="fas fa-gift" style="color:#ff73fa;"></i>Uma Atualização Gratuita Mensal</li>
+        <li><i class="fas fa-rocket" style="color:#ff73fa;"></i>Selo Booster</li>
+        <li><i class="fas fa-crown" style="color:#ff73fa;"></i>Cargo no Servidor</li>
+      </ul>
+      <a href="https://discord.gg/2QjR22xjDU">Assinar</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Hym Bio. Todos os direitos reservados.</p>
+    <p>Desenvolvido por <a href="https://hymbio.xyz/@hym" style="color:#ff954f;">@hymbio</a></p>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('snow-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const flakes = [];
+    const flakeCount = 50;
+    const orange = '#ff954f';
+
+    for (let i = 0; i < flakeCount; i++) {
+      flakes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 2 + 1,
+        d: Math.random() + 1
+      });
+    }
+
+    function drawFlakes() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = orange;
+      ctx.beginPath();
+      for (let i = 0; i < flakeCount; i++) {
+        const f = flakes[i];
+        ctx.moveTo(f.x, f.y);
+        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+      }
+      ctx.fill();
+      moveFlakes();
+    }
+
+    function moveFlakes() {
+      for (let i = 0; i < flakeCount; i++) {
+        const f = flakes[i];
+        f.y -= f.d;
+        if (f.y < 0) {
+          f.y = height + 10;
+          f.x = Math.random() * width;
+        }
+      }
+    }
+
+    function animateFlakes() {
+      drawFlakes();
+      requestAnimationFrame(animateFlakes);
+    }
+
+    animateFlakes();
+  </script>
+</body>
+</html>
